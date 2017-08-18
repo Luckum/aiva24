@@ -14,14 +14,15 @@ $(document).ready(function() {
             }
         },
         {
-            breakpoint: 600,
+            breakpoint: 768,
             settings: {
                 slidesToShow: 2,
-                slidesToScroll: 2
+                slidesToScroll: 2,
+                dots: true
             }
         },
         {
-            breakpoint: 480,
+            breakpoint: 478,
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
@@ -39,13 +40,15 @@ $(document).ready(function() {
                 breakpoint: 768,
                 settings: {
                     arrows: false,
-                    centerMode: true,
+                    centerMode: false,
                     centerPadding: '40px',
-                    slidesToShow: 3
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    dots: true
                 }
             },
             {
-                breakpoint: 480,
+                breakpoint: 520,
                 settings: {
                     arrows: false,
                     centerMode: false,
