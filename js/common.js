@@ -5,11 +5,12 @@ $(document).ready(function() {
         slidesToScroll: 2,
         responsive: [
         {
-            breakpoint: 1024,
+            breakpoint: 1299,
             settings: {
                 slidesToShow: 3,
                 slidesToScroll: 3,
                 infinite: true,
+                arrows: false,
                 dots: true
             }
         },
@@ -30,12 +31,23 @@ $(document).ready(function() {
             }
         }]
     });
-    if ($(window).width() <= 1200) {
+    if ($(window).width() <= 1299) {
         $('.partn-ul').slick({
             centerMode: true,
             centerPadding: '60px',
-            slidesToShow: 1,
+            slidesToShow: 4,
             responsive: [
+            {
+                breakpoint: 1299,
+                settings: {
+                    arrows: false,
+                    centerMode: false,
+                    centerPadding: '40px',
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    dots: true
+                }
+            },
             {
                 breakpoint: 768,
                 settings: {
@@ -108,7 +120,7 @@ $(document).ready(function() {
     });
     var logo_big = $("#top-logo").width();
     var logo_sm = logo_big - logo_big * 30 / 100;
-    if ($(window).width() > 1200) {
+    if ($(window).width() > 1299) {
         $(window).scroll(function() {
             if ($(this).scrollTop() > 50) {
                 $("#top-t").css({"background-color": "#dce0e3"});
